@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to My Site</h1>
+        <p>I'm a passionate developer</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="profile.jpg" alt="My Photo" class="profile-img">
+        <p>I love creating web applications and solving problems with code.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project" onclick="showDetails('project1')">
+            <h3>Weather App</h3>
+            <p class="project-desc">A simple weather application</p>
+        </div>
+        <div class="project" onclick="showDetails('project2')">
+            <h3>Task Manager</h3>
+            <p class="project-desc">A productivity application</p>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="search-container">
+            <input type="text" id="blog-search" placeholder="Search blog posts...">
+        </div>
+        <div class="blog-posts" id="blog-posts">
+            <!-- Blog posts will be loaded here by JavaScript -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Personal Website</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
