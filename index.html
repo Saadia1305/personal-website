@@ -3,65 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Alex Morgan | Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="home">
-        <h1>Welcome to My Site</h1>
-        <p>I'm a passionate developer</p>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="profile.jpg" alt="My Photo" class="profile-img">
-        <p>I love creating web applications and solving problems with code.</p>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project" onclick="showDetails('project1')">
-            <h3>Weather App</h3>
-            <p class="project-desc">A simple weather application</p>
+<body class="light-mode">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#home">AM</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="mobile-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
         </div>
-        <div class="project" onclick="showDetails('project2')">
-            <h3>Task Manager</h3>
-            <p class="project-desc">A productivity application</p>
-        </div>
-    </section>
+    </header>
 
-    <section id="blog">
-        <h2>Blog</h2>
-        <div class="search-container">
-            <input type="text" id="blog-search" placeholder="Search blog posts...">
-        </div>
-        <div class="blog-posts" id="blog-posts">
-            <!-- Blog posts will be loaded here by JavaScript -->
-        </div>
-    </section>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="container">
+                <div class="home-content">
+                    <h1 id="greeting">Hello there!</h1>
+                    <h2>I'm <span class="highlight">Alex Morgan</span></h2>
+                    <p class="tagline">Full-Stack Developer & UX Enthusiast</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary-btn">View My Work</a>
+                        <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="home-image">
+                    <div class="shape"></div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <a href="#about">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                    <div class="separator"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://via.placeholder.com/400x500" alt="Alex Morgan">
+                    </div>
+                    <div class="about-text">
+                        <h3>Who am I?</h3>
+                        <p>I'm a passionate Full-Stack Developer based in San Francisco with over 5 years of experience building web applications and digital experiences that users love.</p>
+                        <p>My journey in tech began at Stanford University where I earned my degree in Computer Science. Since then, I've worked with startups and established companies to create modern, efficient, and impactful digital solutions.</p>
+                        
+                        <div class="skills">
+                            <h3>My Skills</h3>
+                            <div class="skill-tabs">
+                                <div class="tab-header">
+                                    <div class="tab active" data-tab="frontend">Frontend</div>
+                                    <div class="tab" data-tab="backend">Backend</div>
+                                    <div class="tab" data-tab="other">Other</div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-panel active" id="frontend">
+                                        <div class="skill-item">
+                                            <span>HTML/CSS</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" data-width="95"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span>JavaScript</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" data-width="90"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span>React</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" data-width="85"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-panel" id="backend">
+                                        <div class="skill-item">
+                                            <span>Node.js</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" data-width="80"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span>Python</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" data-width="75"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span>Databases</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" data-width="85"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-panel" id="other">
+                                        <div class="skill-item">
+                                            <span>UI/UX Design</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" data-width="70"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span>DevOps</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" data-width="65"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span>Project Management</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" data-width="75"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="resume-cta">
+                            <a href="#" class="btn primary-btn">Download Resume <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My Projects</h2>
+                    <div class="separator"></div>
+                </div>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Dev</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="data">Data</button>
+                </div>
+                <div class="projects-grid">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My Blog</h2>
+                    <div class="separator"></div>
+                </div>
+                <div class="blog-search">
+                    <input type="text" id="blog-search-input" placeholder="Search blog posts...">
+                </div>
+                <div class="blog-posts">
+                    <!-- Blog posts will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                    <div class="separator"></div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>alex.morgan@example.com</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                            <p>San Francisco, CA</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="far fa-clock"></i>
+                            <h3>Working Hours</h3>
+                            <div id="live-clock">00:00:00</div>
+                            <p>Mon - Fri: 9AM - 5PM PST</p>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Your name">
+                                <div class="error-message" id="name-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Your email">
+                                <div class="error-message" id="email-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" placeholder="Subject">
+                                <div class="error-message" id="subject-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" placeholder="Your message"></textarea>
+                                <div class="error-message" id="message-error"></div>
+                            </div>
+                            <button type="submit" class="btn primary-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Project details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div class="lightbox" id="image-lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img src="" id="lightbox-img">
+    </div>
 
     <footer>
-        <p>&copy; 2025 My Personal Website</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">Alex Morgan</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Alex Morgan. All Rights Reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and JavaScript</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="main.js"></script>
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
